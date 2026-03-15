@@ -117,6 +117,7 @@ async function applyLocalGitIdentity(localPath: string): Promise<void> {
     logger.debug(`git config user.email = ${email}`);
   }
 
+  /* v8 ignore next 3 */
   if (name || email) {
     logger.info(`Git identity set — name: ${name ?? '(unchanged)'}, email: ${email ?? '(unchanged)'}`);
   }

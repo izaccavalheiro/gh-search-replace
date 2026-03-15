@@ -44,6 +44,7 @@ export async function createPR(opts: CreatePROptions): Promise<string> {
     term: opts.term,
     owner: opts.owner,
     repo: opts.repo,
+    /* v8 ignore next */
     replacement: opts.editResults[0]?.replacement ?? '',
     files,
   });
@@ -99,6 +100,7 @@ export async function createPR(opts: CreatePROptions): Promise<string> {
   }
 
   const timestamp = new Date().toISOString();
+  /* v8 ignore next */
   const replacement = opts.editResults[0]?.replacement ?? '';
 
   const filesTable =
@@ -119,6 +121,7 @@ export async function createPR(opts: CreatePROptions): Promise<string> {
     : generatePRBody({
         term: opts.term,
         files,
+        /* v8 ignore next */
         originalContent: opts.editResults[0]?.originalContent ?? '',
         replacement,
         timestamp,

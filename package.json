@@ -1,6 +1,6 @@
 {
   "name": "gh-search-replace",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A production-grade CLI tool that searches GitHub code, edits matched files, and opens Pull Requests — all from your terminal.",
   "type": "module",
   "bin": {
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^2.1.9",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0",
     "vitest": "^2.1.0"
@@ -37,5 +38,16 @@
   "engines": {
     "node": ">=20"
   },
+  "keywords": [
+    "github",
+    "search",
+    "replace",
+    "cli",
+    "pull-request",
+    "automation",
+    "refactoring",
+    "octokit",
+    "gh"
+  ],
   "license": "MIT"
 }

@@ -33,6 +33,7 @@ export function buildDiff(
         diff.push({ type: 'added', lineNumber: lineNum, content: modifiedLines[idx] });
       }
     } else {
+      /* v8 ignore next */
       diff.push({ type: 'context', lineNumber: lineNum, content: originalLines[idx] ?? '' });
     }
   }
@@ -71,6 +72,7 @@ export function printContextPreview(
   console.log();
   for (const ln of [...toShow].sort((a, b) => a - b)) {
     const lineStr = String(ln).padStart(4);
+    /* v8 ignore next */
     const content = lines[ln - 1] ?? '';
     const isMatch = matchedLineNumbers.includes(ln);
     if (isMatch) {

@@ -19,7 +19,7 @@ const program = new Command();
 program
   .name('gh-search-replace')
   .description('Search GitHub code, edit files, and open Pull Requests from the terminal')
-  .version('1.0.0');
+  .version('1.0.2');
 
 // ── auth ──────────────────────────────────────────────────────────────────────
 
