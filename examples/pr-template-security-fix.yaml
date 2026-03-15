@@ -1,0 +1,43 @@
+# Template for security-related find-and-replace patches.
+# Usage: gh-search-replace run "insecure-call(" --replace "secure-call(" --template examples/pr-template-security-fix.yaml
+
+title: "fix(security): replace {term}"
+
+description: |
+  ## Security fix
+
+  > ⚠️ This PR addresses a security issue. Please review carefully.
+
+  ### What changed
+
+  Replaced all occurrences of `{term}` with `{replacement}` across the following files:
+
+  {files_table}
+
+  ### Why
+
+  The usage of `{term}` was flagged during a security audit. This automated patch
+  applies the recommended replacement. Manual review is still required to confirm
+  correctness in each context.
+
+  ---
+  *Generated on {timestamp} by [gh-search-replace](https://github.com/your-org/gh-search-replace)*
+
+labels:
+  - security
+  - priority:high
+  - automated
+
+assignees:
+  - security-oncall
+
+reviewers:
+  - security-reviewer-1
+  - security-reviewer-2
+
+teamReviewers:
+  - security-team
+
+milestone: "Security Hardening"
+
+draft: true

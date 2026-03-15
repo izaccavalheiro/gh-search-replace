@@ -1,0 +1,4 @@
+# Minimal template — only overrides the title.
+# Everything else (description, labels, etc.) uses the built-in defaults.
+
+title: "chore: replace {term} with {replacement}"

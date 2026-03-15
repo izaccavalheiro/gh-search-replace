@@ -1,0 +1,30 @@
+# Template for automated dependency upgrades.
+# Usage: gh-search-replace run "old-dep@1" --replace "new-dep@2" --template examples/pr-template-dependency-upgrade.yaml
+
+title: "chore(deps): upgrade {term} → {replacement}"
+
+description: |
+  ## Dependency upgrade
+
+  This PR was generated automatically by `gh-search-replace`.
+
+  | | |
+  |---|---|
+  | **From** | `{term}` |
+  | **To** | `{replacement}` |
+
+  ### Files changed
+
+  {files_table}
+
+  ---
+  > *Generated on {timestamp}*
+
+labels:
+  - dependencies
+  - automated
+
+reviewers:
+  - platform-team-lead
+
+draft: false

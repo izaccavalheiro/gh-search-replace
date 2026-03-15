@@ -1,0 +1,35 @@
+# Template for deprecation migrations (e.g. replacing a deprecated API/method).
+# Usage: gh-search-replace run "deprecatedFn" --replace "newFn" --template examples/pr-template-deprecation.yaml
+
+title: "refactor: migrate from deprecated {term}"
+
+description: |
+  ## Deprecation migration
+
+  This PR was generated automatically by `gh-search-replace`.
+
+  `{term}` is deprecated and scheduled for removal. This PR migrates all call
+  sites to the replacement: `{replacement}`.
+
+  ### Changed files
+
+  {files_table}
+
+  ### Checklist
+
+  - [ ] Replacement behaves identically in all contexts above
+  - [ ] Tests still pass
+  - [ ] No type errors introduced
+
+  ---
+  *Generated on {timestamp}*
+
+labels:
+  - refactor
+  - tech-debt
+  - automated
+
+reviewers:
+  - code-owner
+
+milestone: "Tech Debt Q2"
